@@ -1,0 +1,6 @@
+h1, h2, .jeju { border: 3px solid #f29a16; }
+h1 { color: rgb(255, 0, 0); }
+h2 { color: #0812c9;}
+table, th, td { border: 1px solid #000; border-collapse: collapse; margin:10px; padding: 10px;}
+h1, h2{ display: inline-block; }
+.jeju { color: #08c942; display:block;}

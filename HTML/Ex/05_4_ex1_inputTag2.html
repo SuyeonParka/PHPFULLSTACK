@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="textbox">메모</label>
+        <textarea name="memeo" id="textbox" cols="40" rows="20"></textarea>
+        <br>
+        <br><br>
+        <!-- value값을 다르게 하는 이유:값이 같으면 서버가 헷갈림. -->
+        <select name="select" id="select" size="5" multiple>
+            <option value="0">탕수육</option>
+            <option value="1">커피</option>
+            <option value="2" selected>밥</option>
+        </select>
+        <br>
+        <br><br>
+
+        <label for="cook">요리</label>
+        <input type="text" id="cook" list="datalist">
+        <datalist name="datalist" id="datalist">
+            <option value="0">밥</option>
+            <option value="1">돈가스</option>
+            <option value="2">물</option>
+        </datalist>
+
+        <!-- 버튼이 있다는 것을 정확하게 알고 전달한다. -->
+        <br>
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button">Button</button>
+    </form>
+
+</body>
+</html>

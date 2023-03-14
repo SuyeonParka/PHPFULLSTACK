@@ -1,0 +1,12 @@
+.tl_left { text-align: left; }
+.tl_right { text-align: right; }
+.tl_center { text-align: center; }
+.tl_height {
+            line-height: 1.5em;
+            background-color: gray; 
+            height: 300px; 
+            width: 100%;
+            text-align: center; 
+            line-height: 300px;
+            }
+.tl_deco { text-decoration: none;}

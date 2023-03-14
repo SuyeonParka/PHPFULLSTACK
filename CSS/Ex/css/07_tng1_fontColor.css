@@ -1,0 +1,6 @@
+h1 { color: #c91a32;  display: inline-block;}
+h2 {color: #0f1ef5; display: inline-block;}
+h1, h2, .jeju { border: 3px solid orange;}
+.jeju { color: #0aad26; }
+table {border-collapse: collapse;}
+table, th, td { border: 1px solid #000;}

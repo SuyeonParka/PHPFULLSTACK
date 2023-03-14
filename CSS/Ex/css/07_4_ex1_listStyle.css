@@ -1,0 +1,4 @@
+.cook_1 {
+    list-style-type: decimal;
+    list-style-position: inside; }
+.cook_3 { list-style: decimal inside; }

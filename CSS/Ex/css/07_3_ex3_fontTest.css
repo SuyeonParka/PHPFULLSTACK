@@ -1,0 +1,4 @@
+.h1_shadow { text-shadow: -5px -5px 5px #000000; }
+.h1_tran { text-transform: lowercase; }
+.h1_spacing { letter-spacing: 2rem; }
+.h1_w_spacing { word-spacing: 2em;}
