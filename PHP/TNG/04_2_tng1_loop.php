@@ -59,13 +59,21 @@
 //     echo "\n";
 // }
 
-for ($i=5; $i >= 1; $i--)
+$num = 5;
+for ($i=1; $i <= $num; $i++)
 {
-    for ($j = 0; $j < $i; $j++)
+    for ($star = $num; $star > $i; $star--)
     {
         echo " ";
     }
+    for ($star = 0; $star < $i; $star++)
+    {
+        echo "*";
+    }
+    echo "\n";
 }
+
+//위 코드를 for문 두개로 해보기
 
 
 ?>
