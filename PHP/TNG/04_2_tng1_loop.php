@@ -59,21 +59,30 @@
 //     echo "\n";
 // }
 
+// $num = 5;
+// for ($i=1; $i <= $num; $i++)
+// {
+//     for ($star = $num; $star > $i; $star--)
+//     {
+//         echo " ";
+//     }
+//     for ($star = 0; $star < $i; $star++)
+//     {
+//         echo "*";
+//     }
+//     echo "\n";
+// }
+
+//위 코드를 for문 두개로 해보기
 $num = 5;
-for ($i=1; $i <= $num; $i++)
+for ($i=5; $i <= $num; $i--)
 {
-    for ($star = $num; $star > $i; $star--)
+    for ($star=1; $star <= $i; $star++)
     {
         echo " ";
     }
-    for ($star = 0; $star < $i; $star++)
-    {
-        echo "*";
-    }
-    echo "\n";
+    echo "*","\n";
 }
-
-//위 코드를 for문 두개로 해보기
 
 
 ?>
