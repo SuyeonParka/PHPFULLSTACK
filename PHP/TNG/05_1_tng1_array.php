@@ -47,28 +47,14 @@ foreach($arr1 as $key => $val)
     {
         echo $key.":".$val."\n";
     }
-    else 
+    else
     {
         unset($arr1[$key]);
     }
 }
+print_r($arr1);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//$key === "삭제"
 
 // $food = array("떡볶이", "햄버거", "치킨", "피자", "국밥", "샐러드");
 // $z = 0;

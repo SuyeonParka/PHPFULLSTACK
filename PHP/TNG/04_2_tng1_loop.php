@@ -73,16 +73,28 @@
 //     echo "\n";
 // }
 
-//위 코드를 for문 두개로 해보기
-$num = 5;
-for ($i=5; $i <= $num; $i--)
-{
-    for ($star=1; $star <= $i; $star++)
-    {
-        echo " ";
-    }
-    echo "*","\n";
-}
+// 위 코드를 for문 두개로 해보기
+// $num = 5;
+// for ($i=0; $i <= $num; $i++)
+// {
+//     for ($star=1; $star <= $i; $star++)
+//     {
+//         echo " ";
+//     }
+//     echo "*","\n";
+// }
 
+//쌤이한거
+$num = 5;
+for($i = $num; $i>0; $i--) {
+    for($z = 1; $z<=$num; $z++) {
+        if($z<$i) {
+            echo " ";
+        } else {
+            echo "*";
+        }        
+    }
+    echo "\n";
+}
 
 ?>
