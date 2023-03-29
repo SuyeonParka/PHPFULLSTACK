@@ -56,29 +56,29 @@ echo my_min($arr);
 //쌤이한거
 //foreach를 써서 루프가 다 돌아서 비효율적
 //루프 돌 때마다 is_null($res_max), $res_max < $val 둘다 체크해줘야해서 비효율적
-function my_max1($param_arr)
-{
-    $res_max = null;
-    foreach ($param_arr as $val)
-    {
-        if(is_null($res_max) || $res_max < $val)
-        {
-            $res_max = $val;
-        }
-    }
-    return $res_max;
-}
+// function my_max1($param_arr)
+// {
+//     $res_max = null;
+//     foreach ($param_arr as $val)
+//     {
+//         if(is_null($res_max) || $res_max < $val)
+//         {
+//             $res_max = $val;
+//         }
+//     }
+//     return $res_max;
+// }
 
-function my_min1($param_arr)
-{
-    $res_min = null;
-    foreach ($param_arr as $val)
-    {
-        if(is_null($res_min) || $res_min > $val)
-        {
-            $res_min = $val;
-        }
-    }
-    return $res_min;
-}
+// function my_min1($param_arr)
+// {
+//     $res_min = null;
+//     foreach ($param_arr as $val)
+//     {
+//         if(is_null($res_min) || $res_min > $val)
+//         {
+//             $res_min = $val;
+//         }
+//     }
+//     return $res_min;
+// }
 ?>

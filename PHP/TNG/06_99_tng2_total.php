@@ -9,7 +9,7 @@ function star($moon)
     echo "\n";
 }
 
-// echo star(3);
+echo star(3);
 echo "\n";
 
 // 직사각형
@@ -31,11 +31,11 @@ echo "\n";
 // }
 // echo fnc_tng(5);
 
-function fnc_tng2($easy)
-{
-    for ($i=10; $i >= 1 ; $i--) { 
-        star($i);
-    }
-}
-echo fnc_tng2(5);
+// function fnc_tng2($easy) //거꾸로, 근데 이상함
+// {
+//     for ($i=5; $i >= 1 ; $i--) { 
+//         star($i);
+//     }
+// }
+// echo fnc_tng2(5);
 ?>
