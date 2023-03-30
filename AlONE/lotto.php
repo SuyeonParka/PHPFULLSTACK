@@ -12,25 +12,50 @@
 
 // $arr = array();
 
-function my_lotto($arr)
+// function my_lotto($arr)
+// {
+//     for ($i=0; $i < 6; $i++) //로또 번호 6개가 나와야 돼서
+//     { 
+//         $arr[$i] = rand(1,45);
+//         for($k=0; $k<$i; $k++) 
+//         {
+//             if($arr[$i] !== $arr[$k])      //값이 같지 않다면 랜덤 값 출력
+//             {
+//                 echo $arr[$i];  
+//             }     
+//         }
+//     }
+//     return $arr;
+// }
+
+// echo $num[$i];
+// $result = my_lotto($arr);
+// print_r($result);
+
+
+
+
+
+//반복된 값을 다시 비교해서 한번더 비교하기 위해서 $i--를 넣어줌   
+$arr = array();
+for ($i=0; $i < 6; $i++) 
 {
-    for ($i=1; $i < 7; $i++) //로또 번호 6개가 나와야 돼서
-    { 
-        $arr[$i] = rand(1,45);
-        for($k=0; $k<$i; $k++) 
+    $arr[$i] = rand(1,45);
+    for($k=0; $k<$i; $k++) 
+    {
+        if($arr[$i] === $arr[$k])    
         {
-            if($arr[$i] !== $arr[$i])      //값이 같지 않다면 랜덤 값 출력
-            {
-                echo $arr[$i];  
-            }     
-        }
+            $i--;  
+        }     
+        break;
     }
-    return $arr;
 }
+print_r($arr);
+// var_dump($arr);
 
-$result = my_lotto($arr);
-print_r($result);
 
+// for문에서는 in_array
+// while문에서는 unique (쌤 추천)
 
 
 
