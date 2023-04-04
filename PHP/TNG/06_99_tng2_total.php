@@ -15,7 +15,7 @@ echo "\n";
 // 직사각형
 // function fnc_star($coffee)
 // {
-//     for ($i=0; $i < $coffee; $i++) { 
+//     for ($i=0; $i < $coffee; $i++)  { 
 //         star($coffee);
 //     }
 //     echo "\n";

@@ -64,8 +64,6 @@ print_r($arr);
 
 // function my_lotto1($dream)
 // {
-   
-    
 //     foreach ($dream as $key => $val) 
 //     {
 //         if($dream < $i && $dream !== $val)
