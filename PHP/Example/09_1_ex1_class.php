@@ -7,7 +7,7 @@ class Student
     // 클래스 멤버 변수
     public $std_name; // 어디서든 접근가능
     private $std_id; // Student Class 내에서만 접근 가능
-    protected $std_age; // 상속 Class 내에서만 접근 가능
+    protected $std_age; // class 자기 자신과 상속 Class 내에서만 접근 가능
     // 접근제어 지시자 : pubilc, private, protected
 
     public function print_student($param_std_name, $param_std_age)

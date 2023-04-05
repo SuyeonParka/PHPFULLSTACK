@@ -202,34 +202,135 @@ fnc_reference( $str );
 
 
 
-
-function my_star($moon)
-{
-    for ($k=1; $k <= $moon ; $k++) 
-    { 
-        echo "*";
-    }
-    echo "\n";
-}
+// 별만찍는 함수
+// function fnc_print_star($num)
+// {
+//     for ($i=1; $i <= $num ; $i++) 
+//     { 
+//         echo "*";
+//     }
+//     echo "\n";
+// }
 
 // echo my_star(5);
 
-my_star(1)."\n";
-my_star(2)."\n";
-my_star(3)."\n";
-my_star(4)."\n";
-my_star(5)."\n";
+// fnc_print_star(1);
+// fnc_print_star(2);
+// fnc_print_star(3);
+// fnc_print_star(4);
+// fnc_print_star(5);
+
+
+/*---------------------------------------
+(수정이력관리 하는 법)
+파일명 :
+시스템명 :
+이력
+    v001 : new - d1111
+    v002 : fnc_print_str 수정 - d1111
+----------------------------------------*/
+// 위 함수를 내가 원하는 '문자'로 출력
+// function fun_print_str($param_num) // v002 del
+// function fnc_print_star($num, $k)   // v002 add
+// {
+//     for ($i=1; $i <= $num ; $i++)
+//     {   
+//         //echo "*"; //v002 del
+//         echo $k;    // v002 add
+//     }
+//     echo "\n";
+// }
+
+// fnc_print_star(3, "@");
+// fnc_print_star(2, "@");
+// fnc_print_star(1, "@");
+
+//reference(현업에서 많이 사용)
+// function fnc_reference2( &$param_str )
+// {
+//     echo "2번 : $param_str \n";
+//     $param_str = "fnc_reference2에서 값 변경";
+//     echo "3번 : $param_str \n";
+// }
+// $str = "aaa";
+// echo "1번 : $str \n";
+// fnc_reference2($str);
+// echo "4번 : $str \n";
+
+
+//--------------class----------------
+
+class Food
+{
+    //접근 제어 지시자 : public private protected
+
+    //멤버 변수
+    protected $str_name; //private에서 protected로 바꿈 : 상속클래스에서 받을 수 있게 할려교
+    protected $int_price;
+
+    //메소드(class 내에 있는 함수)
+    public function __construct( $param_name, $param_price) //__construct는 고정된 이름임, 안에 든 식이 자동으로 실행
+    {
+        $this->str_name = $param_name;
+        $this->int_price = $param_price;
+    }
+
+    public function fnc_print_food()
+    {
+        $str = $this->str_name." : ".$this->int_price."원";
+        echo $str;
+    }
+
+    public function int_food_price($food_price) //int_price멤버변수가 private으로 설정돼있어서 외부에서 접근하려면 public function(외부에서도 접근할 수 있는)만들어주고 밖에서 값 세팅해줌
+    {
+        // $food_price = $this->int_price; //첨에 이래했다가 값 적용안됐음
+        // echo $food_price;
+        $this->int_price=$food_price;
+    }
+    
+}
+
+// $obj_food = new Food("탕수육", 10000);
+
+// // $obj_food->fnc_print_food();
+
+// $obj_food->int_food_price(50000);
+
+// $obj_food->fnc_print_food();
 
 
 
+// Food Class의 멤버 변수 $int_price의 값을 12000원으로 바꾸어 주세요.
+// this는 class안에 있는 모든 것을 가리킴 그래서 ->로 불러올 수 있음
+// class사용이유 : 개발자들이 좀 더 소스코드를 파악하기 위해서
+// class 안의 종류 : 멤버 변수와 매소드
 
+// 상속 : 부모 클래스의 객체들을 자식 클래스가 상속받아 사용할 수 있다.
+class KoreanFood extends Food //extends 부모 상속자
+{
+    protected $side_dish;
 
+    public function __construct( $param_name, $param_price, $param_side_dish)
+    {
+        $this->str_name = $param_name;
+        $this->int_price = $param_price;
+        $this->side_dish = $param_side_dish;
+    }
 
+    // 오버라이딩 : 부모클래스에서 정의된 메소드를 자식클래스에서 재정의
+    public function fnc_print_food()
+    {
+        // $str = $this->str_name." : ".$this->int_price."원\n"."사이드 : ".$this->side_dish;
+        parent::fnc_print_food();
+        $str = "\n사이드 : ".$this->side_dish."\n";
+        echo $str;
+    }
+}
 
+$obj_korean_food = new KoreanFood( "치킨", 20000, "치킨무");
+$obj_korean_food->fnc_print_food();
 
-
-
-
+// 오버라이딩 : 부모클래스에서 정의된 메소드를 자식클래스에서 재정의
 
 
 
