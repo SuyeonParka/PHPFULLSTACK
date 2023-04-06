@@ -115,9 +115,6 @@ echo "나 : ".array_pop($arr).array_pop($arr2)." ".array_pop($arr).array_pop($ar
 //     case "J":
 //         $score = 10;
 //         break;
-//     case "10":
-//         $score = 10;
-//         break;
 // }
 
 // 7. 1입력 : 카드 더받기, 2입력 : 카드비교, 0입력 : 게임종료
@@ -160,9 +157,35 @@ echo "나 : ".array_pop($arr).array_pop($arr2)." ".array_pop($arr).array_pop($ar
 // };
 
 
+// $my_score = array_sum(array_pop($arr).array_pop($arr2)." ".array_pop($arr).array_pop($arr2));
+// $deal_score = array_sum(array_pop($arr).array_pop($arr2)." ".array_pop($arr).array_pop($arr2));
+// echo "딜러 : ".array_sum(array_pop($arr).array_pop($arr2)." ".array_pop($arr).array_pop($arr2))."\n";
+// echo "나 : ".array_sum(array_pop($arr).array_pop($arr2)." ".array_pop($arr).array_pop($arr2))."\n";
 
-
-
+// $arr2 = array("S", "C", "H", "D");
+// $arr =
+// array(
+//     "A" => 11
+//     ,"1" => 1
+//     ,"2" => 2
+//     ,"3" => 3
+//     ,"4" => 4
+//     ,"5" => 5
+//     ,"6" => 6
+//     ,"7" => 7
+//     ,"8" => 8
+//     ,"9" => 9
+//     ,"10" => 10
+//     ,"11" => 11
+//     ,"12" => 12
+//     );
+// $arr2 =
+// array(
+//     "K"=>10
+//     ,"Q"=>10
+//     ,"J"=>10
+//
+// );
 
 
 
