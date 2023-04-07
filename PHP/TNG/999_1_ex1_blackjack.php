@@ -117,6 +117,27 @@ echo "나 : ".array_pop($arr).array_pop($arr2)." ".array_pop($arr).array_pop($ar
 //         break;
 // }
 
+// function card_get_score($arr) switch문에 or 사용의 잘못된 방식
+// {
+//     $sum = 0;
+//     for ($i=0; $i < count($arr); $i++) //문자열을 숫자로 바꿈
+//     {
+//         switch ($arr[$i]) 
+//         {
+//             case 'K'|| 'Q' || 'J': //or연산자 안먹힘
+//                 $deck2[$i] = 10;
+//                 break;
+//             case 'A':
+//                 $deck2[$i] = 11;
+//                 break;
+//             default :
+//                 $deck2[$i] = $arr[$i];
+//             break;
+//         }
+//     }
+//     $sum = array_sum($deck2);
+//     return $sum;
+// }
 // 7. 1입력 : 카드 더받기, 2입력 : 카드비교, 0입력 : 게임종료
 // $num = "";
 
@@ -188,9 +209,18 @@ echo "나 : ".array_pop($arr).array_pop($arr2)." ".array_pop($arr).array_pop($ar
 // );
 
 
+//이거는 원본을 바꾸는 것
+// for ($i=0; $i < 52; $i++) 
+// { 
+//     if ($deck[$i] === "K" || $deck[$i] === "J" || $deck[$i] === "Q") 
+//     {
+//         $deck[$i] = 10;
+//     }
+// }
 
-
-
+//2번 파일에서 나와 유저의 패를 각각보이고 싶을 때 썼었는데 오류뜸
+// echo $user_card_arr; //배열이라서 echo로 안나옴
+// echo $dealer_card_arr;
 
 
 

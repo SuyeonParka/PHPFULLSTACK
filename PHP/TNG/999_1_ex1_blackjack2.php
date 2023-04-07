@@ -21,27 +21,46 @@
 7. 1입력 : 카드 더받기, 2입력 : 카드비교(딜러와 플레이어의 카드 오픈:딜러가 짐??), 0입력 : 게임종료
 8. 한번 썼던 카드는 다시 쓸 수 없다.(카드 중복 ㄴ)
 --------------------------------------------------------*/
-// while(true) {
-// 	echo '시작';
-// 	print "\n";
-// 	fscanf(STDIN, "%d\n", $input);        
-// 	if($input === 0) {
-// 		break;
-// 	}
-// 	echo $input;
-// 	print "\n";
-// }
-// echo "끝!\n";
 
-//앞의 내용의 영향을 받는??거 뭐였드라,,
+/*-------------------------------------------
+기능 : 게임시작
+-----------------------------------------*/
+while(true) 
+{
+	echo '시작';
+	print "\n";
+	fscanf(STDIN, "%d\n", $input);        
+	if($input === 0) 
+    {
+		break;
+	}
+    elseif ($input === 1)
+    {
+        
+    }
+    elseif ($input === 2)
+    {
+
+    }
+	echo $input;
+	print "\n";
+}
+echo "끝!\n";
 
 
+
+/*------------------------------------------------------
+deck2배열을 준 이유는 j,q,k 값이 10으로 계산되게 하려고.
+deck을 쓰면 원본이 훼손돼서 새로운 배열을 만들어 주고 
+거기에 바뀐 배열을 집어넣어서 그 값을 이용해서 계산되게 
+함.
+-------------------------------------------------------*/
 $deck = array(); 
 $deck2 = array();
 $user_card_arr = array();
 $dealer_card_arr = array();
 $arr = array("A", "2", "3", "4", "5", "6", "7", "8", "9", "10","J", "Q", "K");
-
+// $arr_shape = array("♥", "◆", "♣", "♠");
 
 //2장 랜덤값
 for ($i=0; $i < count($arr); $i++) 
@@ -53,46 +72,19 @@ for ($i=0; $i < count($arr); $i++)
 }
 
 // var_dump($deck);
-shuffle($deck);
+shuffle($deck); //카드 섞기
 
-//이거는 원본을 바꾸는 것
-// for ($i=0; $i < 52; $i++) 
-// { 
-//     if ($deck[$i] === "K" || $deck[$i] === "J" || $deck[$i] === "Q") 
-//     {
-//         $deck[$i] = 10;
-//     }
-// }
 
-$idx = 0;
+
+/*------------------------------------------
+카드를 나 한장 유저 한장씩 가져배부해서 
+총 4장의 카드를 배부함
+-------------------------------------------*/
+$idx = 0; //카드 한장씩 나눠주는거 
 array_push($user_card_arr, $deck[$idx++]);
 array_push($dealer_card_arr, $deck[$idx++]);
 array_push($user_card_arr, $deck[$idx++]);
 array_push($dealer_card_arr, $deck[$idx++]);
-// echo "유저 패 ".$user_card_arr;
-// echo "딜러 패 : ".$dealer_card_arr;
-
-// function card_get_score($arr)
-// {
-//     $sum = 0;
-//     for ($i=0; $i < count($arr); $i++) //문자열을 숫자로 바꿈
-//     {
-//         switch ($arr[$i]) 
-//         {
-//             case 'K'|| 'Q' || 'J': //or연산자 안먹힘
-//                 $deck2[$i] = 10;
-//                 break;
-//             case 'A':
-//                 $deck2[$i] = 11;
-//                 break;
-//             default :
-//                 $deck2[$i] = $arr[$i];
-//             break;
-//         }
-//     }
-//     $sum = array_sum($deck2);
-//     return $sum;
-// }
 
 function card_get_score($arr)
 {
@@ -117,6 +109,10 @@ function card_get_score($arr)
     $sum = array_sum($deck2);
     return $sum;
 }
+
+print_r($user_card_arr);
+print_r($dealer_card_arr);
+
 
 $result = card_get_score($user_card_arr);
 echo "유저 : ".$result."\n";
@@ -150,10 +146,14 @@ echo "딜러 : ".$result1;
 
 
 
-
-if ($result > 21)                               // 결과??
+//결과비교
+if ($result > 21)                               
 {
     echo "\n결과 : ".$result." "."유저 패배";
+}
+elseif ($result1 > 21)
+{
+    echo "\n결과 : ".$result." "."딜러 패배";
 }
 elseif ($result === 21) 
 {
@@ -161,7 +161,7 @@ elseif ($result === 21)
 }
 elseif ($result1 === 21) 
 {
-    echo "\n결과 : ".$result1."딜러 승리";
+    echo "\n결과 : ".$result1." 딜러 승리";
 }
 elseif ($result > $result1 && $result < 22) 
 {
@@ -177,14 +177,14 @@ elseif ($result === $result1)
     {
         echo "\n결과 : 유저 승리";
     }
+    elseif(count($dealder_card_arr) < count($user_card_arr))
+    {
+        echo "\n결과 : 딜러 승리";
+    }
     else 
     {
         echo "\n결과 : 비김";
     }
-}
-elseif ($deck = 'A' && $deck2 = 'A') 
-{
-    $result -= 10;
 }
 
 

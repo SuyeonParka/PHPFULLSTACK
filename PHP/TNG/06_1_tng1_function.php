@@ -98,7 +98,7 @@ function fnc_minu2()
         else 
         {
             $sub -= $val;
-        }   
+        }
     }
     return $sub;
 }
