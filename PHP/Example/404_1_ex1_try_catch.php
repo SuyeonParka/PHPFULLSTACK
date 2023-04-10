@@ -58,7 +58,7 @@ catch( Exception $e )
 finally
 {
     echo "Finally\n";
-    $obj_conn = null; //파기
+    $obj_conn = null; //파기, db 사용 후 받아주는거
 }
 
 echo "종료";
