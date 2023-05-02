@@ -1,2 +1,7 @@
 $stmt = $conn->query( $sql ) 해당 쿼리를 사용하여 디비를 요청하고, statement객체를 받아옴
 $result = $stmt->fetchAll() statement객체의 정보를 fetch해서 연상배열로 가져옴
+$stmt = $conn->prepare( $sql ) 해당 쿼리를 세팅해서 statement 객제를 반환
+$stmt->execute( $arr_prepare ) 해당 prepared statement 데이터를  이용해서 db에 요청
+$result = $stmt->fetchAll() db가 응답한 정보를 fetch해서 연상배열로 반환
+var_dumpp( $result );
+$conn = null db연결 파기
