@@ -1,0 +1,2 @@
+$stmt = $conn->query( $sql ) 해당 쿼리를 사용하여 디비를 요청하고, statement객체를 받아옴
+$result = $stmt->fetchAll() statement객체의 정보를 fetch해서 연상배열로 가져옴
