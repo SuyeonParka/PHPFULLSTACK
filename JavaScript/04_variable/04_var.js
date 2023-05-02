@@ -55,3 +55,25 @@ function test1() {
     // console.log(v_test1);
     console.log(vVar1);
 }
+
+//------------------
+// 호이스팅 (hoisting)
+//------------------
+// 인터프리터가 변수와 함수의 메모리 공간을 선언 전에 미리 할당 하는 것
+// (인터프리터 : 프로그래밍 언어의 소스 코드를 바로 실행하는 컴퓨터 프로그램 또는 환경)
+// 코드가 실행되기 전에 변수와 함수를 최상단에 끌어 올리는 것
+// console.log( hTest() );
+// console.log( "51 line : " + varTest );
+// console.log( "67 line : " + letTest );
+console.log( "68 line : " + constTest);
+
+
+function hTest() {
+    return "함수 : hTest";
+}
+
+var varTest = "var : var변수";
+console.log( "58 line : " + varTest );
+
+let letTest = "let 변수";
+const constTest = "const 상수";
