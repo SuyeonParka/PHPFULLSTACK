@@ -40,7 +40,7 @@ function test() {
 //말 그대로 블록{}이 생성될 때마다 새로운 스코프가 형성되는 것
 function test1() {
     if(true) {
-        let vTest1 = "함수 : 테스트1";
+        let vTest1 = "함수 : 테스트1"; 
         var vVar1 = "var로 선언";
     }
     // console.log(v_test1);
