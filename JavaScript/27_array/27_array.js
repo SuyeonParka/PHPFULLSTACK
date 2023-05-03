@@ -77,6 +77,16 @@ const arrEvery = [1,2,3,4,5];
 let result1 = arrEvery.every( function(val) {
                                     return val % 2 === 0;
                                 });
-console.log(result1);
+// console.log(result1);
 
 let result2 = arrEvery.every( val => val % 2 === 0 );
+
+//some() : 배열 안에 어떤 요소라도 주어진 함수를 통과하는지 판별
+const arrSome = [1,2,3,4,5];
+let result3 = arrSome.some( val => val >= 6 );
+// console.log(result3);
+
+//filter() : 주어진 함수를 통과하는 모든 요소를 모아서 새로운 배열로 반환
+const arrFilter = [1,2,3,4,5];
+let result4 = arrFilter.filter( val => val >= 3);
+console.log(result4);
