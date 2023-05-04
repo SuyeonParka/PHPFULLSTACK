@@ -26,3 +26,16 @@ let result = arr.filter(
 );
 
 console.log(result);
+
+//다른 사람 코드
+function primeNum( val ) {
+    for( let i = 2; i < val; i++ ) {
+        if( val % i === 0 ) {
+            return false;
+        }
+    }
+    return val !== 1; //1이 아닐때 true 반환
+}
+
+let arr2 = arr.filter( val => primeNum( val ) );
+alert( arr2 );
