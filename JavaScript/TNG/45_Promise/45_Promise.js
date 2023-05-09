@@ -60,3 +60,18 @@ let test3 = function() {
 test()  // 얘가 맞으면
 .then(() => test2())    // 얘 실행
 .then(() => test3())    // 그 담 성공하면 얘 실행
+
+
+// 선생님 코드
+function printDelay(ms, str) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log(str);
+            resolve();
+        }, ms);
+    });
+}
+
+printDelay(3000, 'A')
+.then(() => printDelay(2000, 'B'))
+.then(() => printDelay(1000, 'C'));
