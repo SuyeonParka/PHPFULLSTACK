@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'PuradakGentleGothicR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.1/PuradakGentleGothicR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PuradakGentleGothicR';
+    display: grid;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.container {
+    width: 50vw;
+    height: 30vh;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    margin: 30px;
+}
+
+.btn {
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+
+
+
+
