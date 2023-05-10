@@ -35,9 +35,27 @@ h1 {
 }
 
 .btn {
-    padding: 5px;
-    border-radius: 10px;
+    font-family: 'PuradakGentleGothicR';
+    font-weight: 600;
+    font-size: 0.3rem;
+    border-radius: 5px;
     border: 1px solid #000;
+    width: 170px;
+    height: 3vh;
+    background-color: #ecedf0;
+}
+
+span {
+    font-size: 0.5rem;
+}
+
+.stick {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.stay {
+    font-size: 0.3rem;
 }
 
 

@@ -42,7 +42,8 @@ mybutton.addEventListener('click', function() {
 
 function makeList(data) {
     const div = document.getElementById('mydiv');
-    div.replaceChildren();  //부모노드에서 사용
+    // div.replaceChildren();  //부모노드에서 사용
+    div.innerHTML = '';
     data.forEach(item => {
         console.log(item);
         const myImg = document.createElement('img');
@@ -50,6 +51,8 @@ function makeList(data) {
         div.appendChild(myImg); //body에서 변경
     });
 }
+
+//* replaceChildren 대신에 div.innerHTML = ''; 사용 가능
 
 // function toggleImg() {
 //     data.forEach(item => {
