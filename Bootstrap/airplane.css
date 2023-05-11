@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: 'TheJamsil5Bold';
+}
+
+.myair {
+    color: #819ce7;
+}
+
+.nav-item>a{
+    color: #000;
+}
+
+.titleimg {
+    width: 100vw;
+    height: 50vh;
+    border: none;
+}
+.card-img {
+    width: 100vw;
+    height: 50vh;
+}
+
+.mycard {
+    width: 500px;
+    height: 300px;
+    margin-top: 50px;
+}
+
+.myimg {
+    width: 288px;
+    height: 270px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+h5 {
+    color: #000;
+}
+
+.myborder {
+    width: 96vw;
+    height: 30vh;
+    /* border: 1px solid #000; */
+    border-radius: 20px;
+    background-color:#fff;
+    margin-left: 20px;
+    /* margin-top: 90px; */
+}
+
+button {
+    border: none;
+    border-radius: 20px 20px 0 0;
+    margin-top: 50px;
+    width: 23vw;
+    height: 6vh;
+}
+
+button:hover {
+    background-color: #fff;
+}
+
+.bnt {
+    text-align: center;
+}
+
+.myimg:hover {
+    transform: scale(1.1);
+}
+
+.nav-item>a:hover {
+    color : #819ce7
+}

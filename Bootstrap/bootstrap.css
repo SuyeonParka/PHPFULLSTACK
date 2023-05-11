@@ -1,11 +1,25 @@
-@font-face {
+/* @font-face {
     font-family: 'KOTRA_BOLD-Bold';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+} */
+
+@font-face {
+    font-family: 'PuradakGentleGothicR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.1/PuradakGentleGothicR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
 
-
 body {
-    font-family: 'KOTRA_BOLD-Bold';
+    font-family: 'PuradakGentleGothicR';
+}
+
+span {
+    font-size: 0.5rem;
+}
+
+.foot {
+    word-spacing: 10px;
 }
