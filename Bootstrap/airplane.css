@@ -44,6 +44,12 @@ h5 {
     color: #000;
 }
 
+.list {
+    width: 80vw;
+}
+.myspan {
+    font-size:1.2rem
+}
 .myborder {
     width: 96vw;
     height: 30vh;
@@ -62,6 +68,9 @@ button {
     height: 6vh;
 }
 
+.foot {
+    font-size: 10px;
+}
 button:hover {
     background-color: #fff;
 }
