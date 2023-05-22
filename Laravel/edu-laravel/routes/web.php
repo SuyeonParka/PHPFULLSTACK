@@ -216,5 +216,11 @@ Route::get('/makesign', function() {
 ///Route::get('/invitations/{invitation}/{group}', function() {
 Route::get('/sign', function() {
     return "Sign!!";    //문자열을 생성하는 아이
-    //서명이 제대로 돼있는지 확인하는 middleware를 sign이라는 ~에게 줬다. 
+    //서명이 제대로 돼있는지 확인하는 middleware를 signed이라는 ~에게 줬다.
+    //?? 지정한 값과 일치해야 접속가능
+    // 미들웨어 : 우리가 어떠한 라우터에 실행되기 전이나 후에 넣어서 특정 기능을 하기 위함
+    // 보통은 인증절차나 값을 체크 유무에 사용
+    // 라우터에 미들웨어를 사용하게 되면 라우터를 실행햇을때 미들웨어 발동
+    // 유저가 접속했을 때 서명이 있는지 확인 
+    // 'signed'는 정해져있는 
 })->name('sign')->middleware('signed');
