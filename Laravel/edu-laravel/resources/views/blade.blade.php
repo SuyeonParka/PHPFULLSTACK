@@ -49,27 +49,27 @@
 @endsection
 
 {{-- BladeController에 있는 배열 키값 출력 --}}
-{{-- @section('foreach')
+@section('foreach')
     <hr>
     <h5>foreach</h5>
     @foreach($data as $key => $val)
         <span>{{$key.' : '.$val}}</span>
         <br>
     @endforeach
-@endsection --}}
+@endsection
 
 
 @section('foreach')
     <hr>
     <h5>foreach</h5>
-    @foreach($data as $key => $val)
-    {{-- count는 loop가 총 몇개인지 가져옴(데이터의 개수 가져옴)
-            iteration은 반복문이 몇번 반복되고 있는지 출력함--}}
+    @foreach($data as $key => $val) 
+    {{-- count는 loop가 총 몇개인지 가져옴(데이터의 개수 가져옴) --}}
+    {{-- iteration은 반복문이 몇번 반복되고 있는지 출력함 --}}
         <span>{{$loop->count.' >> '.$loop->iteration}}</span>
         <span>{{$key.' : '.$val}}</span>
         <br>
     @endforeach
-@endsection
+@endsection 
 
 {{-- foreach와 forelse의 경우 루프문안에 $loop라고하는 변수가 자동으로 생성돼서 라라벨 프레임워크가 가지고 있음
     그리고 사용할 수 있음--}}
@@ -83,3 +83,4 @@
         <span>빈배열이에요.</span>
     @endforelse
 @endsection
+

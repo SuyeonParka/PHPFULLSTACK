@@ -31,6 +31,7 @@
     @yield('for')
     @yield('foreach')
     @yield('forelse')
+    @yield('foreach2')
 
     {{-- 2번째 인수로 값을 셋팅하고, 해당 파일에서 변수로써 사용 가능 --}}
     {{--  사실 include에는 두번째 인수가 들어감, 배열로 넘겨줌--}}
