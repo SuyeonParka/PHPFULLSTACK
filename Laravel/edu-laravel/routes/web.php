@@ -222,7 +222,30 @@ Route::get('/sign', function() {
     // 미들웨어 : 우리가 어떠한 라우터에 실행되기 전이나 후에 넣어서 특정 기능을 하기 위함
     // 보통은 인증절차나 값을 체크 유무에 사용
     // 라우터에 미들웨어를 사용하게 되면 라우터를 실행했을때 미들웨어 발동
-    // 유저가 접속했을 때 서명이 있는지 확인 
+    // 여기서는 유저가 접속했을 때 서명이 있는지 확인 
     // 'signed'는 정해져있음 
     // 여러개의 미들웨어 사용시에는 ->으로 체이닝
 })->name('sign')->middleware('signed');
+
+//-------------------------------
+// 컨트롤러
+//-------------------------------
+// 커맨드로 컨트롤러 생성 php artisan make:controller TestController
+// 라우터를 캐시화?
+// 캐시화 : 필요할 것 같은 거를 미리 메모리에 올림, 속도 빨라짐
+// 클로저 사용보다 튜플방식으로 만드는게 더 나음
+// index라는 메소드를 만듦
+// 컨트롤러 호출 방법(컨트롤러 쓸 때 항상 use 써줘야함)
+// TestController파일의 namespace
+use App\Http\Controllers\TestController;
+Route::get('/test', [TestController::class, 'index'])->name('tests.index');
+
+
+// 커멘드로 컨트롤러 생성
+// php artisan make:controller TasksController --resource
+use App\Http\Controllers\TasksController;
+route::resource('/tasks', TasksController::class);
+
+
+use App\Http\Controllers\BladeController;
+route::get('blade', [BladeController::class, 'index'])->name('blade.index');
