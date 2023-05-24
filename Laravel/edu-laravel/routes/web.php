@@ -88,11 +88,12 @@ Route::match(['get','post'],'/method', function() {
 // 파라미터를 리퀘스트하는 (보내는) 방식 2가지
 //---------------------
 // 1. 쿼리 스트링으로 파라미터 획득
-// query뒤에 ? 뒤에 붙음
+// query뒤에 ? 뒤에 붙음(주소창 보면)
 // 쿼리 스트링으로 오는 건 그냥 쓸 수가 없어서 리퀘스트 파라미터 줘야함
 // $request 타입을 Request(클래스 객체) 로 하겠다는 의미 
 // Request의 역할 : 타입 힌트
 // Request는 class라서 어디있는지 지정을 해줘야함
+// 주소창에 id=값 name=값 넣어주면 출력됨
 Route::get('/query', function(Request $request) {
     return $request->id.", ".$request->name;
 });
@@ -135,7 +136,8 @@ Route::get('/names', function() {
     return 'name.index !!!';
 })->name('names.index'); //이 라우트의 이름은 name이다
 //href의 url을 수정하지 않아도 name을 통해서 수정 가능해서 가장 추천함
-//name을 지정하는 이유 
+//name을 지정하는 이유 : 라우터에 이름을 지정하여 경로(url) 또는 리다이렉션을 
+// 생성할 때 해당 라우터 이름을 사용하기 위함임
 
 //---------------------
 // 라우트 매칭 실패시 대체 라우트 정의

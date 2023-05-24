@@ -14,7 +14,8 @@
     <a href="{{url('/names');}}">names</a>
     <br>
     <br>
-    <a href="{{route('names.index');}}">names</a>
     {{-- 라라벨에서 추천하는 방식 --}}
+    <a href="{{route('names.index');}}">names</a>
+    
 </body>
 </html>
