@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//main페이지로 먼저 가게하고 싶어서
+// Route::get('/', function() {
+//     return view('main');
+// });
 //get방식, '/'=경로
 //function~ : closer
 //'welcome'이라는 view를 표시할 것이다
