@@ -11,7 +11,6 @@
 </head>
 <body>
     {{-- 다른 템플릿을 포함하는 방법 --}}
-    {{-- <?php include ?> 이방식 쓰지말기 --}}
 
     @include('layout.inc.header')
 
