@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
         // CategorySeeder는 드가보면 어떤 데이터 드가있는지 앎
         // $this->call(CategorySeeder::class);
         // $this->call(BoardSeeder::class);
-        $this->call(MycategorySeeder::class);
+        $this->call(MemberSeeder::class);
 
 
       // 더미 데이터 삽입용 팩토리 호출
