@@ -250,8 +250,13 @@ Route::get('/test', [TestController::class, 'index'])->name('tests.index');
 // 커멘드로 컨트롤러 생성
 // php artisan make:controller TasksController --resource
 use App\Http\Controllers\TasksController;
-route::resource('/tasks', TasksController::class);
+Route::resource('/tasks', TasksController::class);
 
 
 use App\Http\Controllers\BladeController;
-route::get('blade', [BladeController::class, 'index'])->name('blade.index');
+Route::get('blade', [BladeController::class, 'index'])->name('blade.index');
+
+//알아서 해당 메소드들을 다 불러옴
+// 터미널에 php artisan route:list 써보삼(post, get머시기 나옴)
+use App\Http\Controllers\BoardController;
+Route::resource('/board', BoardController::class);
