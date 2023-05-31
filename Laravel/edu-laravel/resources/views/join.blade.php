@@ -7,7 +7,7 @@
     <title>Join</title>
 </head>
 <body>
-    <form name="login" action="{{route{'Join.store}}" method="post">
+    <form name="login" action="{{route('Join.store')}}" method="post">
         @csrf
         <input type="text" name="name">이름
         <br>
