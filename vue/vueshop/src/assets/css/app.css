@@ -1,0 +1,81 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.nav {
+    background-color: #2c3e50;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  
+  .nav a {
+    color: white;
+    padding: 10px;
+  }
+
+  .bg_black {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+  }
+
+  .bg_white {
+    width: 50%;
+    background-color: white;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .cloth {
+    width: 100px;
+    height: 100px;
+  }
+
+  img {
+    border-radius: 10px;
+  }
+
+  .discount {
+    background: beige;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+
+  /* .startTran {
+    opacity: 0;
+    transition: all 1s;
+  }
+
+  .endTran {
+    opacity: 1;
+  } */
+
+  /* 등장 애니메이션 
+    트랜지션 name-enter(등장)-from(시작상태), active(어떻게 효과 줄거), to(마지막 최종 상태)*/
+  .modalTran-enter-from {
+    opacity: 0;
+  }
+  .modalTran-enter-active {
+    transition: all 1s;
+  }
+  .modalTran-enter-to {
+    opacity: 1;
+  }
+  /* 퇴장 애니메이션 */
+  .modalTran-leave-from {
+    /* opacity: 1; */
+    transform: translateX(0px);
+  }
+  .modalTran-leave-active {
+    transition: all 1s;
+  }
+  .modalTran-leave-to {
+    /* opacity: 0; */
+    transform: translateX(1000px);
+  }
